@@ -3,7 +3,7 @@ branch-defaults:
     environment: flask-1-env
     group_suffix: null
   master:
-    environment: null
+    environment: flask-1-env
     group_suffix: null
 global:
   application_name: ConvertNumbers
