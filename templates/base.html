@@ -11,7 +11,16 @@
     # endblock
     Convert Numbers
     </title>
-    
+    <style>
+        @media screen and (max-width: 1024px) {
+            .navbar-end {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+    </style>
 </head>
 <body>
     # include "header.html"
@@ -19,10 +28,39 @@
     # block content_base
     # endblock content_base
 
-    <div class='hero-foot has-background-primary'>
-        <p class='has-text-centered has-text-black'>Made by Rafa Bruno with Flask and Bulma</p>
-        <p class='has-text-centered has-text-black'>2021</p>
+    <div class='hero-foot box has-background-primary has-text-centered has-text-black'>
+        <p>
+            Made by Rafa Bruno with Flask and Bulma
+        </p>
+        <p>2021</p>
     </div>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+            });
+        });
+        }
+
+        });
+    </script>
 </body>
 </html>
