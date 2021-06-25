@@ -1,0 +1,2 @@
+FLASK_APP=convertnumbers
+FLASK_ENV=development
