@@ -1,16 +1,16 @@
 from flask import Flask, render_template, request
 
 
-application = Flask(__name__)
+app = Flask(__name__)
 Flask.jinja_options = {'line_statement_prefix': '#'}
 
 
-@application.route('/')
+@app.route('/')
 def index():
     return render_template('index.html')
 
 
-@application.route('/decimal', methods=["GET", "POST"])
+@app.route('/decimal', methods=["GET", "POST"])
 def decimal():
     if request.method == 'POST':
         in_decimal = request.form['number_in_decimal']
@@ -23,7 +23,7 @@ def decimal():
     return render_template('decimal.html')
 
 
-@application.route('/binary', methods=["GET", "POST"])
+@app.route('/binary', methods=["GET", "POST"])
 def binary():
     if request.method == 'POST':
         in_binary = request.form['number_in_binary']
@@ -36,7 +36,7 @@ def binary():
     return render_template('binary.html')
 
 
-@application.route('/hexadecimal', methods=["GET", "POST"])
+@app.route('/hexadecimal', methods=["GET", "POST"])
 def hexadecimal():
     if request.method == 'POST':
         in_hexa = request.form['number_in_hexa']
@@ -50,4 +50,4 @@ def hexadecimal():
 
 
 if __name__ == '__main__':
-    application.run()
+    app.run()
