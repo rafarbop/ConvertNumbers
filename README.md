@@ -1,8 +1,12 @@
 # ConvertNumbers
 
-Aplicação, desenvolvida em Python, que converte números entre diferentes bases númericas.
+Aplicação Backend em Python para converter números entre bases decimal, binária e hexadecimal.
 
-USando o Flask no backend para realizar a conversão.
+Conhecimentos e Tecnologias Utilizados:
+- Python
+- Flask
+- HTML
+- Framework CSS Bulma
+- Hospedado (originalmente) com Amazon AWS Elastic Beanstalk e posteriormente transferido para Heroku.
 
-Converte entre bases decimal, hexadecimal e binário.
- 
+Link: https://convertnumbers.rafabr.top
